@@ -54,7 +54,7 @@ const HotCollections = () => {
         const response = await axios.get(
           "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections",
         );
-        console.log(response.data);
+       
         setCollections(response.data);
       } catch (error) {
         console.error("Error fetching collections:", error);
