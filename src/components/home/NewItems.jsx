@@ -54,6 +54,7 @@ const NewItems = () => {
     const fetchNewItems = async () => {
       try {
         const response = await axios.get("https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems");
+      
         setNewItems(response.data);
       } catch (error) {
         console.error("Error fetching new items:", error);
@@ -127,12 +128,10 @@ const NewItems = () => {
               <div style={{ padding: "0 8px" }}>
               <div className="nft__item">
                 <div className="author_list_pp">
-                  <Link
-                    to="/author"
+                  <Link to={`/author/${item.authorId}`}
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title={`Creator: ${item.authorName}`}
-                  >
+                    title={`Creator: ${item.authorName}`}>
                     <img className="lazy" src={item.authorImage} alt="" />
                     <i className="fa fa-check"></i>
                   </Link>
