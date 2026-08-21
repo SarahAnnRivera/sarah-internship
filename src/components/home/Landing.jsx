@@ -23,8 +23,10 @@ const Landing = () => {
                 </span>
               </h6>
               <div className="spacer-10"></div>
-              <h1>Create, sell or collect digital items.</h1>
-              <p className="lead">
+              <h1 data-aos="fade-up" data-aos-duration="1000">
+                Create, sell or collect digital items.
+              </h1>
+              <p className="lead" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 Unit of data stored on a digital ledger, called a blockchain,
                 that certifies a digital asset to be unique and therefore not
                 interchangeable
